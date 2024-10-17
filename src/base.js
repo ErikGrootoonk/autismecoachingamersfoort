@@ -1,12 +1,18 @@
 const navBar = document.querySelector("#navbar");
-    const threshold = navBar.offsetHeight;
+const threshold = navBar.offsetHeight;
 
-    window.addEventListener("scroll", function() {
-      const scrollPosition = window.scrollY;
+window.addEventListener("scroll", function () {
+  const scrollPosition = window.scrollY;
 
-      if (scrollPosition >= threshold) {
-        navBar.classList.add("fixed", "top-0", "left-0", "right-0", "z-50");
-      } else {
-        navBar.classList.remove("fixed", "top-0", "left-0", "right-0", "z-50");
-      }
-    });
+  if (scrollPosition >= threshold) {
+    navBar.classList.add("fixed", "top-0", "left-0", "right-0", "z-50");
+  } else {
+    navBar.classList.remove("fixed", "top-0", "left-0", "right-0", "z-50");
+  }
+});
+
+const eMail = document.querySelector("#email");
+const val1 = "ellen";
+const val2 = "@zichtopzin.nl";
+
+eMail.textContent = val1 + val2;
